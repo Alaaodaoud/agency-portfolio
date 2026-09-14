@@ -5,6 +5,8 @@ import { getClinicBySlug, getAllClinicSlugs } from "@/data/clinics";
 import { DisclaimerBanner } from "@/components/DisclaimerBanner";
 import { WhatsAppProfileCard } from "@/components/WhatsAppProfileCard";
 import { LanguageToggle } from "@/components/LanguageToggle";
+import { BookingForm } from "@/components/BookingForm";
+import { FeaturePreviewCards } from "@/components/FeaturePreviewCards";
 
 interface DemoPageProps {
   params: Promise<{ slug: string }>;
@@ -24,6 +26,7 @@ export default async function DemoPage({ params }: DemoPageProps) {
 
   const tCommon = await getTranslations("common");
   const tProfileCard = await getTranslations("profileCard");
+  const tFeatures = await getTranslations("features");
   const locale = await getLocale();
   const isArabic = locale === "ar";
 
@@ -104,6 +107,27 @@ export default async function DemoPage({ params }: DemoPageProps) {
                 </div>
               ))}
             </div>
+          </section>
+
+          {/* Booking Form Section */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              {tCommon("bookAppointment")}
+            </h2>
+            <div className="max-w-lg mx-auto">
+              <BookingForm clinicName={name} primaryColor={clinic.primaryColor} />
+            </div>
+          </section>
+
+          {/* Feature Preview Cards */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">
+              {tFeatures("sectionTitle")}
+            </h2>
+            <p className="text-gray-600 text-center mb-6">
+              {tFeatures("sectionSubtitle")}
+            </p>
+            <FeaturePreviewCards primaryColor={clinic.primaryColor} />
           </section>
 
           {/* WhatsApp Profile Card */}

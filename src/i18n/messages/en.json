@@ -5,7 +5,8 @@
     "learnMore": "Learn More",
     "viewDemo": "View Demo",
     "ourServices": "Our Services",
-    "aboutUs": "About Us"
+    "aboutUs": "About Us",
+    "bookAppointment": "Book Appointment"
   },
   "disclaimer": {
     "title": "Proposed Demo",
@@ -16,6 +17,37 @@
     "services": "Services",
     "contactViaWhatsApp": "Contact via WhatsApp",
     "moodInspiration": "Visual mood inspired by"
+  },
+  "booking": {
+    "demoFeature": "Demo Feature",
+    "title": "Book an Appointment",
+    "subtitle": "Fill out the form below and we'll confirm your appointment via WhatsApp",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "preferredDate": "Preferred Date",
+    "preferredTime": "Preferred Time",
+    "notes": "Additional Notes (Optional)",
+    "submitButton": "Request Appointment",
+    "or": "or",
+    "whatsappBooking": "Book via WhatsApp",
+    "toastTitle": "Request Received!",
+    "toastMessage": "We'll confirm your appointment on WhatsApp shortly."
+  },
+  "features": {
+    "demoPreview": "Demo Preview",
+    "includedIn25": "Included in $25/mo plan",
+    "sectionTitle": "Website Features Preview",
+    "sectionSubtitle": "See what's included with your clinic website",
+    "remindersTitle": "Appointment Reminders",
+    "remindersDesc": "Automatic WhatsApp reminders sent to patients before their appointments — reduce no-shows by up to 30%.",
+    "reminderPreviewTitle": "Appointment Reminder",
+    "reminderPreviewText": "Hi Ahmed! This is a reminder of your appointment tomorrow at 10:00 AM. Reply YES to confirm or call us to reschedule.",
+    "autoReplyTitle": "Instant Auto-Reply",
+    "autoReplyDesc": "Never miss a patient message — automatic responses 24/7 with your clinic hours, location, and booking link.",
+    "autoReplyIncoming": "Hi, are you open today?",
+    "autoReplyResponse": "Thanks for contacting us!",
+    "autoReplyResponseText": "We're open Sun-Thu 9AM-9PM. Book online at our website or reply with your preferred time!",
+    "instantReply": "Instant auto-reply"
   },
   "home": {
     "heroTitle": "Professional Web Solutions for Kuwait Healthcare",
