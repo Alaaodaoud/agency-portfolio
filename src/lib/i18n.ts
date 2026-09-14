@@ -102,7 +102,7 @@ export const translations = {
       whatsapp: "Chat on WhatsApp",
       whatsappDescription: "Quick response • Available daily • Arabic & English",
       email: "Email Us",
-      emailAddress: "hello@alaawebagency.com",
+      emailAddress: "alaa.cs.94@gmail.com",
       location: "Based in Kuwait • Serving clients worldwide",
     },
     footer: {
@@ -210,7 +210,7 @@ export const translations = {
       whatsapp: "تواصل عبر واتساب",
       whatsappDescription: "رد سريع • متاح يومياً • عربي وإنجليزي",
       email: "راسلنا",
-      emailAddress: "hello@alaawebagency.com",
+      emailAddress: "alaa.cs.94@gmail.com",
       location: "مقرنا في الكويت • نخدم عملاء حول العالم",
     },
     footer: {
