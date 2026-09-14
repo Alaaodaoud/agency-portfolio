@@ -9,6 +9,7 @@ interface TranslationType {
   pricing: { title: string; subtitle: string; price: string; period: string; features: readonly string[]; cta: string };
   portfolio: { title: string; subtitle: string; viewProfile: string; allClients: string };
   profile: { about: string; services: string; websitePreview: string; contactBusiness: string; contactNote: string; backToPortfolio: string };
+  demo: { title: string; subtitle: string; banner: string; lookNotes: string; lookNotesDesc: string; suggestedServices: string; getYourSite: string; interested: string; contactUs: string; backToDemo: string; viewDemos: string };
   contact: { title: string; subtitle: string; whatsapp: string; email: string };
   footer: { rights: string; poweredBy: string };
 }
