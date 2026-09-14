@@ -23,7 +23,7 @@ export function FeaturePreviewCards({ primaryColor }: FeaturePreviewCardsProps) 
           >
             {t('demoPreview')}
           </span>
-          <span className="text-xs text-gray-500">{t('includedIn25')}</span>
+          <span className="text-xs text-gray-500">{t('includedInPlan')}</span>
         </div>
         <div className="p-5">
           <div className="flex items-start gap-3">
@@ -77,7 +77,7 @@ export function FeaturePreviewCards({ primaryColor }: FeaturePreviewCardsProps) 
           >
             {t('demoPreview')}
           </span>
-          <span className="text-xs text-gray-500">{t('includedIn25')}</span>
+          <span className="text-xs text-gray-500">{t('includedInPlan')}</span>
         </div>
         <div className="p-5">
           <div className="flex items-start gap-3">

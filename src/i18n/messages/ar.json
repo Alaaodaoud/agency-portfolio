@@ -35,7 +35,7 @@
   },
   "features": {
     "demoPreview": "معاينة تجريبية",
-    "includedIn25": "مشمول في خطة $25/شهر",
+    "includedInPlan": "مشمول في خطة $55/شهر",
     "sectionTitle": "معاينة مميزات الموقع",
     "sectionSubtitle": "شاهد ما يتضمنه موقع عيادتك",
     "remindersTitle": "تذكيرات المواعيد",

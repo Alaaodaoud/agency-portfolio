@@ -35,7 +35,7 @@
   },
   "features": {
     "demoPreview": "Demo Preview",
-    "includedIn25": "Included in $25/mo plan",
+    "includedInPlan": "Included in $55/mo plan",
     "sectionTitle": "Website Features Preview",
     "sectionSubtitle": "See what's included with your clinic website",
     "remindersTitle": "Appointment Reminders",
