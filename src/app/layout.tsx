@@ -17,12 +17,12 @@ const ibmPlexArabic = IBM_Plex_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "Alaa Web Agency | Professional Websites for $25/mo",
-  description: "Professional business websites for clinics and local businesses. Affordable, modern, and mobile-friendly designs with WhatsApp support.",
-  keywords: ["website design", "clinic website", "business website", "Kuwait", "affordable websites", "WhatsApp support"],
+  title: "Alaa Web Agency | Professional Clinic Websites for $55/mo",
+  description: "Complete clinic website system with online booking, appointment reminders, and WhatsApp auto-reply. Modern, mobile-friendly designs with ongoing support.",
+  keywords: ["website design", "clinic website", "business website", "Kuwait", "online booking", "WhatsApp support", "appointment reminders"],
   openGraph: {
-    title: "Alaa Web Agency | Professional Websites for $25/mo",
-    description: "Professional business websites for clinics and local businesses.",
+    title: "Alaa Web Agency | Professional Clinic Websites for $55/mo",
+    description: "Complete clinic website system with online booking, appointment reminders, and WhatsApp auto-reply.",
     type: "website",
   },
 };

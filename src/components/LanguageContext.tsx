@@ -1,0 +1,62 @@
+'use client';
+
+import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { Locale, defaultLocale, getTranslations } from '@/lib/i18n';
+
+interface ClinicFeaturesType {
+  title: string;
+  subtitle: string;
+  booking: { title: string; description: string; cta: string; formTitle: string; selectService: string; selectDate: string; selectTime: string; name: string; phone: string; submit: string; whatsappBook: string; confirmation: string };
+  reminders: { title: string; description: string; howItWorks: string; step1: string; step2: string; step3: string; benefit: string };
+  autoReply: { title: string; description: string; example: string; greeting: string; hours: string; location: string; afterHours: string; benefit: string };
+}
+
+interface TranslationType {
+  nav: { home: string; portfolio: string; pricing: string; contact: string };
+  hero: { tagline: string; headline: string; subheadline: string; description: string; cta: string; ctaSecondary: string };
+  homeFeatures: { title: string; subtitle: string; items: Array<{ title: string; description: string }> };
+  cta: { title: string; description: string; button: string };
+  pricing: { title: string; subtitle: string; price: string; period: string; description: string; features: string[]; cta: string; guarantee: string; setupNote: string };
+  portfolio: { title: string; subtitle: string; viewDemo: string; viewProfile: string; allClients: string; templates: Array<{ name: string; description: string; features: string[] }> };
+  profile: { about: string; services: string; websitePreview: string; contactBusiness: string; contactNote: string; backToPortfolio: string };
+  demo: { title: string; subtitle: string; banner: string; lookNotes: string; lookNotesDesc: string; suggestedServices: string; getYourSite: string; interested: string; contactUs: string; backToDemo: string; viewDemos: string };
+  clinicFeatures: ClinicFeaturesType;
+  contact: { title: string; subtitle: string; whatsapp: string; whatsappDescription: string; email: string; emailAddress: string; location: string };
+  footer: { tagline: string; rights: string; privacy: string; terms: string; poweredBy: string };
+}
+
+interface LanguageContextType {
+  locale: Locale;
+  setLocale: (locale: Locale) => void;
+  t: TranslationType;
+  isRTL: boolean;
+}
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [locale, setLocaleState] = useState<Locale>(defaultLocale);
+
+  const setLocale = useCallback((newLocale: Locale) => {
+    setLocaleState(newLocale);
+    document.documentElement.lang = newLocale;
+    document.documentElement.dir = newLocale === 'ar' ? 'rtl' : 'ltr';
+  }, []);
+
+  const t = getTranslations(locale) as TranslationType;
+  const isRTL = locale === 'ar';
+
+  return (
+    <LanguageContext.Provider value={{ locale, setLocale, t, isRTL }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+}
+
+export function useLanguage() {
+  const context = useContext(LanguageContext);
+  if (context === undefined) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+}

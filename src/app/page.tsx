@@ -118,16 +118,16 @@ function FeaturesSection() {
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            {t.features.title}
+            {t.homeFeatures.title}
           </h2>
           <p className="text-lg text-gray-600">
-            {t.features.subtitle}
+            {t.homeFeatures.subtitle}
           </p>
         </div>
 
         {/* Features grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {t.features.items.map((feature, index) => (
+          {t.homeFeatures.items.map((feature, index) => (
             <div
               key={index}
               className="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100"
