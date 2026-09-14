@@ -12,14 +12,32 @@ Professional website agency portfolio showcasing demo clinic websites for busine
   - Website preview mockups
   - Contact CTA
 - **Portfolio Gallery**: Card-based view of all clients with "View Profile" links
+- **Prospect Demo System**: Personalized demo sites for outreach leads (see below)
 - **Pricing Section**: Clear $25/month pricing with feature list
 - **Contact Integration**: WhatsApp and email contact options
 
-## Demo Clients
+## Demo Clients (Portfolio)
 
 - **Demo Dental Care Kuwait** - Dental Clinic in Kuwait City
 - **Demo Family Medical Center** - General Medical Clinic in Salmiya  
 - **Demo Skin Wellness Clinic** - Dermatology Specialty in Hawalli
+
+## Prospect Demo System
+
+For outreach purposes, the site includes a system to create personalized demo website previews for prospect clinics based on public Google Maps and Instagram information.
+
+**Key Features:**
+- Clearly labeled as "Demo preview / اقتراح موقع" - never presented as official
+- Customizable per clinic: name, city, niche, services, IG-inspired colors
+- Design notes based on public visual presence
+- WhatsApp CTA for easy prospect contact
+
+**Sample Prospects (fictional):**
+- Smile Dental Studio (Hawalli) - Cosmetic Dentistry
+- Wellness Family Clinic (Salmiya) - Family Medicine
+- Glow Dermatology Center (Kuwait City) - Dermatology & Aesthetics
+
+📖 **See [docs/CREATING_PROSPECT_DEMOS.md](docs/CREATING_PROSPECT_DEMOS.md) for how to create demos for real leads.**
 
 ## Contact
 

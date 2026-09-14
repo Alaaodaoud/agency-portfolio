@@ -34,6 +34,12 @@ export function Header() {
                 {t.nav.portfolio}
               </Link>
               <Link
+                href="/demo"
+                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+              >
+                {t.demo.viewDemos}
+              </Link>
+              <Link
                 href="/#contact"
                 className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
               >
