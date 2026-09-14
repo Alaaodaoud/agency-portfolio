@@ -1,0 +1,59 @@
+{
+  "common": {
+    "languageToggle": "العربية",
+    "contactUs": "Contact Us",
+    "learnMore": "Learn More",
+    "viewDemo": "View Demo",
+    "ourServices": "Our Services",
+    "aboutUs": "About Us"
+  },
+  "disclaimer": {
+    "title": "Proposed Demo",
+    "message": "This is a PROPOSED demo for pitch purposes only. This is NOT the clinic's official website and is NOT published under their name.",
+    "shortMessage": "Demo for pitch only — not an official website"
+  },
+  "profileCard": {
+    "services": "Services",
+    "contactViaWhatsApp": "Contact via WhatsApp",
+    "moodInspiration": "Visual mood inspired by"
+  },
+  "home": {
+    "heroTitle": "Professional Web Solutions for Kuwait Healthcare",
+    "heroSubtitle": "We create modern, bilingual websites that help clinics and medical practices connect with their patients",
+    "ctaButton": "Get Started",
+    "featuresTitle": "Why Choose Us",
+    "feature1Title": "Bilingual Support",
+    "feature1Desc": "Full Arabic and English support with proper RTL layouts",
+    "feature2Title": "Mobile-First Design",
+    "feature2Desc": "Optimized for the devices your patients actually use",
+    "feature3Title": "Medical Focus",
+    "feature3Desc": "Designed specifically for healthcare providers in Kuwait"
+  },
+  "portfolio": {
+    "title": "Demo Portfolio",
+    "subtitle": "Explore proposed demo templates showcasing our design capabilities",
+    "demoNote": "These are fictional demo clinics created to demonstrate our template system. Each demo shows how we can quickly customize a professional clinic website from basic public information.",
+    "viewDemoButton": "View Demo",
+    "fictional": "Fictional Demo"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Ready to build your clinic's online presence?",
+    "whatsappCta": "Message us on WhatsApp",
+    "email": "Email",
+    "phone": "Phone"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Transparent pricing for quality web solutions",
+    "starterTitle": "Starter",
+    "starterDesc": "Perfect for small clinics",
+    "proTitle": "Professional",
+    "proDesc": "For established practices",
+    "enterpriseTitle": "Enterprise",
+    "enterpriseDesc": "Custom solutions",
+    "contactForPricing": "Contact for pricing",
+    "perMonth": "/month",
+    "features": "Features"
+  }
+}
