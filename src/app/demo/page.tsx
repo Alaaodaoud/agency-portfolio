@@ -75,7 +75,7 @@ export default function DemoPage() {
                 {t.demo.getYourSite}
               </a>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-                {isRTL ? 'ابتداءً من $25/شهرياً' : 'Starting at $25/month'}
+                {isRTL ? '$55/شهرياً' : '$55/month'}
               </p>
             </div>
           </div>

@@ -308,7 +308,7 @@ export function ProspectDemoContent({ prospect }: ProspectDemoContentProps) {
                 </a>
 
                 <div className="text-center">
-                  <p className="text-2xl font-bold text-gray-900 dark:text-white">$25</p>
+                  <p className="text-2xl font-bold text-gray-900 dark:text-white">$55</p>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
                     {isRTL ? '/شهرياً' : '/month'}
                   </p>

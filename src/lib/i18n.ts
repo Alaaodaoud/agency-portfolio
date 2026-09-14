@@ -14,7 +14,7 @@ export const translations = {
     hero: {
       tagline: "Professional Websites for Your Business",
       headline: "Launch Your Business Online",
-      subheadline: "for just $25/month",
+      subheadline: "for just $55/month",
       description: "We create modern, mobile-friendly websites for clinics and local businesses. Professional design, fast delivery, and ongoing WhatsApp support included.",
       cta: "Get Started Today",
       ctaSecondary: "View Our Work",
@@ -89,7 +89,7 @@ export const translations = {
     pricing: {
       title: "Simple, Transparent Pricing",
       subtitle: "One plan. Everything included. No surprises.",
-      price: "$25",
+      price: "$55",
       period: "/month",
       description: "Professional website for your business",
       features: [
@@ -183,7 +183,7 @@ export const translations = {
     hero: {
       tagline: "مواقع احترافية لأعمالك",
       headline: "أطلق عملك على الإنترنت",
-      subheadline: "بـ 25$ شهرياً فقط",
+      subheadline: "بـ 55$ شهرياً فقط",
       description: "نصمم مواقع عصرية ومتجاوبة للعيادات والأعمال المحلية. تصميم احترافي، تسليم سريع، ودعم مستمر عبر واتساب.",
       cta: "ابدأ اليوم",
       ctaSecondary: "شاهد أعمالنا",
@@ -258,7 +258,7 @@ export const translations = {
     pricing: {
       title: "أسعار واضحة وبسيطة",
       subtitle: "خطة واحدة. كل شيء مشمول. بدون مفاجآت.",
-      price: "25$",
+      price: "55$",
       period: "/شهرياً",
       description: "موقع احترافي لعملك",
       features: [

@@ -172,7 +172,7 @@ export function ClientProfileContent({ client }: ClientProfileContentProps) {
                   {isRTL ? 'تواصل معنا' : 'Contact Us'}
                 </a>
                 <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-2">
-                  {isRTL ? 'ابتداءً من $25/شهرياً' : 'Starting at $25/month'}
+                  {isRTL ? '$55/شهرياً' : '$55/month'}
                 </p>
               </div>
             </div>
