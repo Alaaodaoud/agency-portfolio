@@ -79,7 +79,7 @@ Vercel will automatically detect Next.js and configure the build settings.
 Update the WhatsApp number in `/src/app/contact/page.tsx`:
 
 ```typescript
-const whatsappNumber = "96599999999"; // Replace with your number
+const whatsappNumber = "96555044676";
 ```
 
 ### Translations

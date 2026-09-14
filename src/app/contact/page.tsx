@@ -5,7 +5,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 export default function ContactPage() {
   const { t, isRTL } = useLanguage();
 
-  const whatsappNumber = "96599999999"; // Placeholder - replace with actual number
+  const whatsappNumber = "96555044676";
   const whatsappMessage = encodeURIComponent(
     isRTL 
       ? "مرحباً! أريد معرفة المزيد عن خدمات تصميم المواقع"
