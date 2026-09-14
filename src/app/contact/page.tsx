@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 const AGENCY_WHATSAPP = "96555044676";
+const AGENCY_EMAIL = "alaa.cs.94@gmail.com";
 
 export default async function ContactPage() {
   const t = await getTranslations("contact");
@@ -46,6 +47,31 @@ export default async function ContactPage() {
                   {t("whatsappCta")}
                 </a>
                 <p className="mt-4 text-gray-500">+965 5504 4676</p>
+              </div>
+            </div>
+
+            {/* Email Card */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-8">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-teal-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">{t("email")}</h2>
+                <p className="text-gray-600 mb-6">
+                  For detailed inquiries or project specifications.
+                </p>
+                <a
+                  href={`mailto:${AGENCY_EMAIL}`}
+                  className="inline-flex items-center justify-center gap-2 w-full max-w-xs bg-teal-500 hover:bg-teal-600 text-white font-semibold py-4 px-8 rounded-full transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Send Email
+                </a>
+                <p className="mt-4 text-gray-500">{AGENCY_EMAIL}</p>
               </div>
             </div>
 
