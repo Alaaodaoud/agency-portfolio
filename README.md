@@ -1,120 +1,104 @@
-# Alaa Web Agency Portfolio
+# Agency Portfolio
 
-A modern, bilingual (Arabic + English) portfolio website for Alaa's web agency, targeting clinics and local businesses in Kuwait and internationally.
+Professional portfolio and demo templates for a legitimate Kuwait website agency specializing in healthcare/clinic websites.
 
 ## Features
 
-- **Bilingual Support**: Full Arabic and English translations with RTL support
-- **Modern Design**: Clean, professional UI designed for Gulf and international SMBs
-- **Responsive**: Mobile-first design that works on all devices
-- **Fast**: Built with Next.js App Router for optimal performance
-- **Easy Deployment**: Ready for one-click Vercel deployment
+- **Bilingual Support**: Full Arabic (RTL) and English support with proper text direction
+- **Mobile-First Design**: Optimized for the devices patients actually use
+- **Demo Template System**: Configurable clinic demo pages from simple JSON/TS config
+- **WhatsApp Integration**: Easy contact via WhatsApp with the agency number
+- **Medical Focus**: Design language focused on healthcare providers
 
-## Pages
+## Demo Clinic System
 
-- **Home**: Agency overview, key features, and call-to-action
-- **Portfolio**: Interactive demo of 3 clinic website templates (Dental, General Medical, Specialty)
-- **Pricing**: Clear $25/month pricing with included features
-- **Contact**: WhatsApp-first contact approach with easy communication flow
+This project includes a template system for quickly creating **proposed demo** clinic websites. These demos:
+
+- Are for **pitch purposes only**
+- Include clear disclaimers that they are NOT official clinic websites
+- Are configured via a simple data file (`src/data/clinics.ts`)
+- Use only publicly available information (name, general specialty, services)
+- Never claim official ownership or represent actual clinics
+
+### Adding a New Demo Clinic
+
+Edit `src/data/clinics.ts` and add a new entry to the `clinicDemos` array:
+
+```typescript
+{
+  slug: 'my-clinic-demo',
+  nameEn: 'My Clinic Name',
+  nameAr: 'اسم العيادة',
+  aboutEn: 'Description in English...',
+  aboutAr: 'الوصف بالعربية...',
+  services: [
+    { nameEn: 'Service 1', nameAr: 'الخدمة 1' },
+    // ... more services (3-5 recommended)
+  ],
+  mood: 'modern-minimal', // or 'warm-family', 'clinical-trust', 'vibrant-pediatric'
+  primaryColor: '#0d9488',
+  accentColor: '#14b8a6',
+  publicIg: 'optional_instagram_handle' // Optional - for visual mood notes only
+}
+```
+
+## Hosting Notes
+
+⚠️ **IMPORTANT**: All demo clinic pages are intended to be hosted **exclusively on the agency's own subdomain** (e.g., `demos.agencysite.com/clinic-name`).
+
+**Never**:
+- Host demos on the clinic's actual domain
+- Register domains that imply clinic ownership
+- Remove or minimize the disclaimer banners
 
 ## Tech Stack
 
-- [Next.js 16](https://nextjs.org/) - React framework with App Router
+- [Next.js 16](https://nextjs.org/) - React framework
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
-- [Tailwind CSS 4](https://tailwindcss.com/) - Utility-first styling
-- [React 19](https://react.dev/) - UI library
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [next-intl](https://next-intl-docs.vercel.app/) - Internationalization
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 18.17 or later
-- npm, yarn, or pnpm
-
-### Installation
-
 ```bash
-# Clone the repository
-git clone https://github.com/Alaaodaoud/agency-portfolio.git
-cd agency-portfolio
-
 # Install dependencies
 npm install
 
-# Start development server
+# Run development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
-
-Open [http://localhost:3000](http://localhost:3000) to view the site.
-
-### Available Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run start` | Start production server |
-| `npm run lint` | Run ESLint |
-
-## Deployment to Vercel
-
-### Option 1: One-Click Deploy
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Alaaodaoud/agency-portfolio)
-
-### Option 2: Manual Deploy
-
-1. Push your code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Click "New Project"
-4. Import your GitHub repository
-5. Click "Deploy"
-
-Vercel will automatically detect Next.js and configure the build settings.
-
-## Customization
-
-### WhatsApp Number
-
-Update the WhatsApp number in `/src/app/contact/page.tsx`:
-
-```typescript
-const whatsappNumber = "96599999999"; // Replace with your number
-```
-
-### Translations
-
-Edit translations in `/src/lib/i18n.ts` to customize text content for both languages.
-
-### Styling
-
-The design uses Tailwind CSS with custom theme colors defined in `/src/app/globals.css`:
-
-- Primary: Blue tones for trust and professionalism
-- Accent: Green for WhatsApp and success states
 
 ## Project Structure
 
 ```
 src/
-├── app/
-│   ├── layout.tsx      # Root layout with providers
-│   ├── page.tsx        # Home page
-│   ├── globals.css     # Global styles + Tailwind
-│   ├── portfolio/
-│   │   └── page.tsx    # Portfolio page
-│   ├── pricing/
-│   │   └── page.tsx    # Pricing page
-│   └── contact/
-│       └── page.tsx    # Contact page
-├── components/
-│   ├── Header.tsx      # Navigation header
-│   ├── Footer.tsx      # Site footer
-│   └── LanguageProvider.tsx  # i18n context
-└── lib/
-    └── i18n.ts         # Translations
+├── app/                    # Next.js app router pages
+│   ├── page.tsx           # Home page
+│   ├── portfolio/         # Portfolio/demo gallery
+│   ├── demo/[slug]/       # Individual demo pages
+│   ├── contact/           # Contact page
+│   └── pricing/           # Pricing page
+├── components/            # Reusable components
+│   ├── DisclaimerBanner.tsx
+│   ├── WhatsAppProfileCard.tsx
+│   ├── Header.tsx
+│   └── Footer.tsx
+├── data/
+│   └── clinics.ts         # Demo clinic configurations
+└── i18n/                  # Internationalization
+    ├── config.ts
+    ├── request.ts
+    └── messages/
+        ├── en.json
+        └── ar.json
 ```
 
-## License
+## Contact
 
-MIT License - feel free to use this for your own agency website.
+WhatsApp: +965 5504 4676

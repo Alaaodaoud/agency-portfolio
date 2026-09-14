@@ -1,47 +1,40 @@
 import type { Metadata } from "next";
-import { Inter, IBM_Plex_Sans_Arabic } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
+import { isRtl, type Locale } from "@/i18n/config";
 import "./globals.css";
-import { LanguageProvider } from "@/components/LanguageProvider";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 
-const inter = Inter({
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  variable: "--font-inter",
 });
 
-const ibmPlexArabic = IBM_Plex_Sans_Arabic({
-  subsets: ["arabic"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-arabic",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Alaa Web Agency | Professional Websites for $25/mo",
-  description: "Professional business websites for clinics and local businesses. Affordable, modern, and mobile-friendly designs with WhatsApp support.",
-  keywords: ["website design", "clinic website", "business website", "Kuwait", "affordable websites", "WhatsApp support"],
-  openGraph: {
-    title: "Alaa Web Agency | Professional Websites for $25/mo",
-    description: "Professional business websites for clinics and local businesses.",
-    type: "website",
-  },
+  title: "Agency Portfolio - Professional Web Solutions for Kuwait Healthcare",
+  description: "We create modern, bilingual websites for clinics and medical practices in Kuwait. Mobile-first design with full Arabic and English support.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const locale = await getLocale() as Locale;
+  const messages = await getMessages();
+  const rtl = isRtl(locale);
+
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${ibmPlexArabic.variable} font-sans antialiased bg-white text-gray-900`}>
-        <LanguageProvider>
-          <Header />
-          <main className="min-h-screen pt-16">
-            {children}
-          </main>
-          <Footer />
-        </LanguageProvider>
+    <html
+      lang={locale}
+      dir={rtl ? "rtl" : "ltr"}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

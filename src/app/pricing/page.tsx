@@ -1,119 +1,186 @@
-"use client";
-
 import Link from "next/link";
-import { useLanguage } from "@/components/LanguageProvider";
+import { getTranslations } from "next-intl/server";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
-export default function PricingPage() {
-  const { t, isRTL } = useLanguage();
+export default async function PricingPage() {
+  const t = await getTranslations("pricing");
+  const tCommon = await getTranslations("common");
+
+  const plans = [
+    {
+      name: t("starterTitle"),
+      description: t("starterDesc"),
+      price: "150",
+      currency: "KWD",
+      features: [
+        "Single page website",
+        "Mobile responsive design",
+        "Basic SEO setup",
+        "Contact form integration",
+        "1 month support",
+      ],
+    },
+    {
+      name: t("proTitle"),
+      description: t("proDesc"),
+      price: "350",
+      currency: "KWD",
+      featured: true,
+      features: [
+        "Multi-page website (up to 5)",
+        "Bilingual (EN/AR) support",
+        "WhatsApp integration",
+        "Google Maps integration",
+        "Advanced SEO",
+        "3 months support",
+        "Social media links",
+      ],
+    },
+    {
+      name: t("enterpriseTitle"),
+      description: t("enterpriseDesc"),
+      price: null,
+      features: [
+        "Unlimited pages",
+        "Custom features",
+        "Booking system integration",
+        "Content management system",
+        "Priority support",
+        "Training sessions",
+      ],
+    },
+  ];
 
   return (
-    <div className="py-20 bg-gradient-to-b from-gray-50 to-white min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            {t.pricing.title}
-          </h1>
-          <p className="text-lg text-gray-600">
-            {t.pricing.subtitle}
-          </p>
-        </div>
+    <>
+      <Header />
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-teal-600 to-teal-700 text-white py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl font-bold mb-4">{t("title")}</h1>
+            <p className="text-xl text-teal-100">{t("subtitle")}</p>
+          </div>
+        </section>
 
-        {/* Pricing card */}
-        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-lg mx-auto">
-          {/* Header */}
-          <div className="bg-gradient-to-br from-primary-600 to-primary-700 px-8 py-10 text-center text-white">
-            <p className="text-primary-100 mb-2 font-medium">{t.pricing.description}</p>
-            <div className="flex items-end justify-center gap-1">
-              <span className="text-6xl font-bold">{t.pricing.price}</span>
-              <span className="text-xl text-primary-200 mb-2">{t.pricing.period}</span>
+        {/* Pricing Grid */}
+        <section className="py-16 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8">
+              {plans.map((plan, index) => (
+                <div
+                  key={index}
+                  className={`bg-white rounded-2xl shadow-sm border overflow-hidden ${
+                    plan.featured
+                      ? "border-teal-500 ring-2 ring-teal-500"
+                      : "border-gray-100"
+                  }`}
+                >
+                  {plan.featured && (
+                    <div className="bg-teal-500 text-white text-center py-2 text-sm font-medium">
+                      Most Popular
+                    </div>
+                  )}
+                  <div className="p-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      {plan.name}
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-6">{plan.description}</p>
+
+                    <div className="mb-6">
+                      {plan.price ? (
+                        <div className="flex items-baseline gap-1">
+                          <span className="text-4xl font-bold text-gray-900">
+                            {plan.price}
+                          </span>
+                          <span className="text-gray-500">{plan.currency}</span>
+                        </div>
+                      ) : (
+                        <span className="text-xl font-semibold text-gray-900">
+                          {t("contactForPricing")}
+                        </span>
+                      )}
+                    </div>
+
+                    <ul className="space-y-3 mb-8">
+                      {plan.features.map((feature, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm">
+                          <svg
+                            className="w-5 h-5 text-teal-500 flex-shrink-0"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                          <span className="text-gray-600">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <Link
+                      href="/contact"
+                      className={`block w-full text-center py-3 px-6 rounded-full font-semibold transition-colors ${
+                        plan.featured
+                          ? "bg-teal-600 text-white hover:bg-teal-700"
+                          : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+                      }`}
+                    >
+                      {tCommon("contactUs")}
+                    </Link>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+        </section>
 
-          {/* Features */}
-          <div className="px-8 py-8">
-            <ul className="space-y-4">
-              {t.pricing.features.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <svg
-                    className="w-5 h-5 text-accent-500 mt-0.5 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-
-            {/* CTA */}
-            <Link
-              href="/contact"
-              className="mt-8 w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-600 text-white rounded-full font-semibold text-lg hover:bg-primary-700 transition-all hover:scale-[1.02] shadow-lg shadow-primary-500/25"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-              {t.pricing.cta}
-            </Link>
-
-            {/* Guarantee */}
-            <p className="text-center text-gray-500 text-sm mt-4">
-              {t.pricing.guarantee}
-            </p>
-          </div>
-        </div>
-
-        {/* Setup note */}
-        <p className="text-center text-gray-500 text-sm mt-8">
-          {t.pricing.setupNote}
-        </p>
-
-        {/* FAQ section */}
-        <div className="mt-20">
-          <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">
-            {isRTL ? "أسئلة شائعة" : "Frequently Asked Questions"}
-          </h2>
-          <div className="space-y-4">
-            {[
-              {
-                q: isRTL ? "ماذا يشمل السعر الشهري؟" : "What's included in the monthly price?",
-                a: isRTL 
-                  ? "يشمل السعر الاستضافة، شهادة الأمان SSL، تحديثات شهرية (حتى 2)، ودعم عبر واتساب. التصميم الأولي مشمول بدون رسوم إضافية."
-                  : "The price includes hosting, SSL security certificate, monthly updates (up to 2), and WhatsApp support. Initial design is included at no extra charge."
-              },
-              {
-                q: isRTL ? "كم يستغرق إنشاء الموقع؟" : "How long does it take to build my website?",
-                a: isRTL 
-                  ? "معظم المواقع تكون جاهزة خلال 5-7 أيام عمل بعد استلام كل المحتوى والصور منك."
-                  : "Most websites are ready within 5-7 business days after we receive all your content and images."
-              },
-              {
-                q: isRTL ? "هل يمكنني إلغاء الاشتراك في أي وقت؟" : "Can I cancel anytime?",
-                a: isRTL 
-                  ? "نعم! لا توجد عقود طويلة. يمكنك إلغاء اشتراكك في نهاية أي شهر."
-                  : "Yes! There are no long-term contracts. You can cancel your subscription at the end of any month."
-              },
-              {
-                q: isRTL ? "هل تقدمون خدمات إضافية؟" : "Do you offer additional services?",
-                a: isRTL 
-                  ? "نعم، نقدم خدمات إضافية مثل تصميم الشعارات، إدارة وسائل التواصل، وتحسين محركات البحث بأسعار منفصلة."
-                  : "Yes, we offer additional services like logo design, social media management, and SEO optimization at separate rates."
-              },
-            ].map((faq, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <h3 className="font-semibold text-gray-900 mb-2">{faq.q}</h3>
-                <p className="text-gray-600 text-sm">{faq.a}</p>
+        {/* FAQ Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-6">
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  What&apos;s included in the price?
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  All prices include design, development, and initial hosting setup.
+                  Domain registration is not included but we can help you choose and
+                  register one.
+                </p>
               </div>
-            ))}
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  How long does it take?
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Starter websites can be ready within a week. Professional packages
+                  typically take 2-3 weeks. Enterprise projects are scoped individually.
+                </p>
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Do you offer ongoing maintenance?
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Yes! After the included support period, we offer affordable monthly
+                  maintenance packages to keep your site updated and secure.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
