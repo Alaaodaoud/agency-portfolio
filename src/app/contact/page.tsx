@@ -5,7 +5,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 export default function ContactPage() {
   const { t, isRTL } = useLanguage();
 
-  const whatsappNumber = "96599999999"; // Placeholder - replace with actual number
+  const whatsappNumber = "96555044676";
   const whatsappMessage = encodeURIComponent(
     isRTL 
       ? "مرحباً! أريد معرفة المزيد عن خدمات تصميم المواقع"
@@ -57,7 +57,10 @@ export default function ContactPage() {
           </div>
 
           {/* Email Card */}
-          <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+          <a
+            href="mailto:alaa.cs.94@gmail.com"
+            className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-md hover:border-primary-200 transition-all block"
+          >
             <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
               <svg className="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -65,7 +68,7 @@ export default function ContactPage() {
             </div>
             <h3 className="font-semibold text-gray-900 mb-1">{t.contact.email}</h3>
             <p className="text-gray-600 text-sm">{t.contact.emailAddress}</p>
-          </div>
+          </a>
 
           {/* Location Card */}
           <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
