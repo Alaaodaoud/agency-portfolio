@@ -10,6 +10,13 @@ interface TranslationType {
   portfolio: { title: string; subtitle: string; viewProfile: string; allClients: string };
   profile: { about: string; services: string; websitePreview: string; contactBusiness: string; contactNote: string; backToPortfolio: string };
   demo: { title: string; subtitle: string; banner: string; lookNotes: string; lookNotesDesc: string; suggestedServices: string; getYourSite: string; interested: string; contactUs: string; backToDemo: string; viewDemos: string };
+  features: {
+    title: string;
+    subtitle: string;
+    booking: { title: string; description: string; cta: string; formTitle: string; selectService: string; selectDate: string; selectTime: string; name: string; phone: string; submit: string; whatsappBook: string; confirmation: string };
+    reminders: { title: string; description: string; howItWorks: string; step1: string; step2: string; step3: string; benefit: string };
+    autoReply: { title: string; description: string; example: string; greeting: string; hours: string; location: string; afterHours: string; benefit: string };
+  };
   contact: { title: string; subtitle: string; whatsapp: string; email: string };
   footer: { rights: string; poweredBy: string };
 }

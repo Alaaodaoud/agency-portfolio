@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useLanguage } from '@/components/LanguageContext';
 import { ProspectDemo } from '@/lib/prospects';
 import { DemoBanner } from '@/components/DemoBanner';
+import { ClinicFeatures } from '@/components/ClinicFeatures';
 import { AGENCY_CONTACT } from '@/lib/constants';
 
 interface ProspectDemoContentProps {
@@ -271,6 +272,9 @@ export function ProspectDemoContent({ prospect }: ProspectDemoContentProps) {
                   </div>
                 </div>
               </section>
+
+              {/* Smart Clinic Features Section */}
+              <ClinicFeatures clinic={prospect} whatsappNumber="96555044676" />
             </div>
 
             {/* Sidebar */}

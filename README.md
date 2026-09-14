@@ -32,6 +32,25 @@ For outreach purposes, the site includes a system to create personalized demo we
 - Design notes based on public visual presence
 - WhatsApp CTA for easy prospect contact
 
+## Smart Clinic Features
+
+Every demo template prominently showcases the clinic capabilities that prospects expect:
+
+### Online Booking
+- Booking form preview with service selection, date/time picker
+- WhatsApp booking CTA for instant appointment requests
+- 24/7 availability messaging
+
+### Appointment Reminders
+- Visual timeline showing reminder flow (24h before → 2h before → after visit)
+- Example WhatsApp reminder messages
+- "70% fewer no-shows" benefit highlight
+
+### Auto-Reply Messages
+- Chat simulation showing instant responses
+- Examples: greeting, hours, location, after-hours
+- "Never miss a patient inquiry" benefit highlight
+
 **Sample Prospects (fictional):**
 - Smile Dental Studio (Hawalli) - Cosmetic Dentistry
 - Wellness Family Clinic (Salmiya) - Family Medicine
