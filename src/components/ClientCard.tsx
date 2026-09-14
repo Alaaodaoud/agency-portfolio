@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useLanguage } from './LanguageContext';
+import { useLanguage } from './LanguageProvider';
 import { ClientProfile } from '@/lib/clients';
 
 interface ClientCardProps {

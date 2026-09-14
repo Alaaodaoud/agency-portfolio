@@ -19,7 +19,7 @@ export const translations = {
       cta: "Get Started Today",
       ctaSecondary: "View Our Work",
     },
-    features: {
+    homeFeatures: {
       title: "Everything You Need",
       subtitle: "Launch your professional website with confidence",
       items: [
@@ -58,6 +58,8 @@ export const translations = {
       title: "Our Portfolio",
       subtitle: "Sample templates designed for healthcare and local businesses",
       viewDemo: "View Demo",
+      viewProfile: "View Profile",
+      allClients: "All Clients",
       templates: [
         {
           name: "Dental Clinic",
@@ -75,6 +77,14 @@ export const translations = {
           features: ["Treatment Showcase", "Before/After Gallery", "Team Section", "FAQ Section"],
         },
       ],
+    },
+    profile: {
+      about: 'About',
+      services: 'Services',
+      websitePreview: 'Website Preview',
+      contactBusiness: 'Contact This Business',
+      contactNote: 'This is a demo profile. For inquiries about getting your own website, contact us.',
+      backToPortfolio: 'Back to Portfolio',
     },
     pricing: {
       title: "Simple, Transparent Pricing",
@@ -109,6 +119,43 @@ export const translations = {
       backToDemo: 'Back to Demos',
       viewDemos: 'View Demo Previews',
     },
+    clinicFeatures: {
+      title: 'Smart Clinic Features',
+      subtitle: 'Everything your clinic needs to serve patients better',
+      booking: {
+        title: 'Online Booking',
+        description: 'Patients book appointments 24/7 via your website or WhatsApp',
+        cta: 'Book Appointment',
+        formTitle: 'Book Your Appointment',
+        selectService: 'Select Service',
+        selectDate: 'Preferred Date',
+        selectTime: 'Preferred Time',
+        name: 'Full Name',
+        phone: 'Phone Number',
+        submit: 'Request Appointment',
+        whatsappBook: 'Or Book via WhatsApp',
+        confirmation: 'We\'ll confirm your appointment within 2 hours',
+      },
+      reminders: {
+        title: 'Appointment Reminders',
+        description: 'Automatic WhatsApp reminders reduce no-shows by up to 70%',
+        howItWorks: 'How It Works',
+        step1: '24 hours before: First reminder sent',
+        step2: '2 hours before: Final reminder with directions',
+        step3: 'After visit: Follow-up message & feedback request',
+        benefit: 'Fewer no-shows, happier patients',
+      },
+      autoReply: {
+        title: 'Auto-Reply Messages',
+        description: 'Instant responses to common questions, even outside office hours',
+        example: 'Example Auto-Replies',
+        greeting: '"Welcome! How can we help you today?"',
+        hours: '"Our clinic hours are 9 AM - 9 PM, Saturday to Thursday"',
+        location: '"We\'re located at [address]. Click for directions!"',
+        afterHours: '"We\'re currently closed. Leave a message and we\'ll reply when we open."',
+        benefit: 'Never miss a patient inquiry',
+      },
+    },
     contact: {
       title: "Let's Talk",
       subtitle: "Ready to get your business online? We're here to help.",
@@ -123,6 +170,7 @@ export const translations = {
       rights: "All rights reserved",
       privacy: "Privacy Policy",
       terms: "Terms of Service",
+      poweredBy: "Built with care in Kuwait",
     },
   },
   ar: {
@@ -140,7 +188,7 @@ export const translations = {
       cta: "ابدأ اليوم",
       ctaSecondary: "شاهد أعمالنا",
     },
-    features: {
+    homeFeatures: {
       title: "كل ما تحتاجه",
       subtitle: "أطلق موقعك الاحترافي بثقة",
       items: [
@@ -179,6 +227,8 @@ export const translations = {
       title: "أعمالنا",
       subtitle: "نماذج مصممة للقطاع الصحي والأعمال المحلية",
       viewDemo: "عرض النموذج",
+      viewProfile: "عرض الملف",
+      allClients: "جميع العملاء",
       templates: [
         {
           name: "عيادة أسنان",
@@ -196,6 +246,14 @@ export const translations = {
           features: ["عرض العلاجات", "معرض قبل/بعد", "قسم الفريق", "الأسئلة الشائعة"],
         },
       ],
+    },
+    profile: {
+      about: 'نبذة عنا',
+      services: 'خدماتنا',
+      websitePreview: 'معاينة الموقع',
+      contactBusiness: 'تواصل مع هذا النشاط',
+      contactNote: 'هذا ملف تجريبي. للاستفسار عن الحصول على موقعك الخاص، تواصل معنا.',
+      backToPortfolio: 'العودة للأعمال',
     },
     pricing: {
       title: "أسعار واضحة وبسيطة",
@@ -230,6 +288,43 @@ export const translations = {
       backToDemo: 'العودة للعروض',
       viewDemos: 'عرض اقتراحات المواقع',
     },
+    clinicFeatures: {
+      title: 'مميزات العيادة الذكية',
+      subtitle: 'كل ما تحتاجه عيادتك لخدمة المرضى بشكل أفضل',
+      booking: {
+        title: 'الحجز الإلكتروني',
+        description: 'يحجز المرضى مواعيدهم على مدار الساعة عبر الموقع أو واتساب',
+        cta: 'احجز موعد',
+        formTitle: 'احجز موعدك',
+        selectService: 'اختر الخدمة',
+        selectDate: 'التاريخ المفضل',
+        selectTime: 'الوقت المفضل',
+        name: 'الاسم الكامل',
+        phone: 'رقم الهاتف',
+        submit: 'طلب موعد',
+        whatsappBook: 'أو احجز عبر واتساب',
+        confirmation: 'سنؤكد موعدك خلال ساعتين',
+      },
+      reminders: {
+        title: 'تذكيرات المواعيد',
+        description: 'تذكيرات واتساب التلقائية تقلل الغياب بنسبة تصل إلى 70%',
+        howItWorks: 'كيف يعمل',
+        step1: 'قبل 24 ساعة: إرسال التذكير الأول',
+        step2: 'قبل ساعتين: تذكير نهائي مع الاتجاهات',
+        step3: 'بعد الزيارة: رسالة متابعة وطلب تقييم',
+        benefit: 'غياب أقل، مرضى أسعد',
+      },
+      autoReply: {
+        title: 'الرد التلقائي',
+        description: 'ردود فورية على الأسئلة الشائعة، حتى خارج ساعات العمل',
+        example: 'أمثلة على الردود التلقائية',
+        greeting: '"مرحباً! كيف يمكننا مساعدتك اليوم؟"',
+        hours: '"ساعات العمل من 9 صباحاً إلى 9 مساءً، السبت إلى الخميس"',
+        location: '"موقعنا في [العنوان]. اضغط للحصول على الاتجاهات!"',
+        afterHours: '"نحن مغلقون حالياً. اترك رسالة وسنرد عند فتح العيادة."',
+        benefit: 'لا تفوّت أي استفسار من المرضى',
+      },
+    },
     contact: {
       title: "لنتحدث",
       subtitle: "جاهز لإطلاق عملك على الإنترنت؟ نحن هنا للمساعدة.",
@@ -244,6 +339,7 @@ export const translations = {
       rights: "جميع الحقوق محفوظة",
       privacy: "سياسة الخصوصية",
       terms: "شروط الخدمة",
+      poweredBy: "صنع بعناية في الكويت",
     },
   },
 };

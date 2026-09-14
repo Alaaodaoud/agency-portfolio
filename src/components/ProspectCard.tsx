@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useLanguage } from './LanguageContext';
+import { useLanguage } from './LanguageProvider';
 import { ProspectDemo } from '@/lib/prospects';
 
 interface ProspectCardProps {

@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useLanguage } from '@/components/LanguageContext';
+import { useLanguage } from '@/components/LanguageProvider';
 import { ClientProfile } from '@/lib/clients';
 import { WebsiteMockup } from '@/components/WebsiteMockup';
+import { ClinicFeatures } from '@/components/ClinicFeatures';
 import { AGENCY_CONTACT } from '@/lib/constants';
 
 interface ClientProfileContentProps {
@@ -128,6 +129,9 @@ export function ClientProfileContent({ client }: ClientProfileContentProps) {
                 <WebsiteMockup client={client} variant="contact" />
               </div>
             </section>
+
+            {/* Smart Clinic Features Section */}
+            <ClinicFeatures clinic={client} whatsappNumber={client.whatsappPlaceholder} />
           </div>
 
           {/* Sidebar */}

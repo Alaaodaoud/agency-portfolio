@@ -1,7 +1,7 @@
 'use client';
 
 import { ClientProfile } from '@/lib/clients';
-import { useLanguage } from './LanguageContext';
+import { useLanguage } from './LanguageProvider';
 
 interface WebsiteMockupProps {
   client: ClientProfile;

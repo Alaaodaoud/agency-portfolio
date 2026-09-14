@@ -1,6 +1,6 @@
 'use client';
 
-import { useLanguage } from './LanguageContext';
+import { useLanguage } from './LanguageProvider';
 import { AGENCY_CONTACT } from '@/lib/constants';
 
 interface DemoBannerProps {

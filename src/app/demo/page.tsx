@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useLanguage } from '@/components/LanguageContext';
+import { useLanguage } from '@/components/LanguageProvider';
 import { sampleProspects } from '@/lib/prospects';
 import { ProspectCard } from '@/components/ProspectCard';
 import { DemoBanner } from '@/components/DemoBanner';
